@@ -2,13 +2,13 @@
 
 <div class="container">
 
-    <div class="hide">
+    <div class="hide profile-image">
         <img src="/assets/img.jpg" width="175px" height="175px">
     </div>
 
     <section id="about" class="intro-section">
         <div class="profile-image">
-            <img src="../../assets/images/img.jpg" alt="Prashant Katare">
+            <img src="/assets/img.png" alt="Prashant Katare">
         </div>
         
         <div class="intro-content">
@@ -39,7 +39,7 @@
     <br>
 
     @for (skill of skills; track skill) {
-        <div class="rcorners shadow skill-card" style="background-color: #C73659; color: antiquewhite;">
+        <div class="rcorners shadow skill-card">
             {{skill}}
         </div>
     }
@@ -55,18 +55,13 @@
     <br>
 
     <div class="row">
-        <div class="col rcorners shadow card">
-            <h5 style="color: #4D869C;">Introduction to HTML5 (Coursera)</h5>
-            <br>
-            <p style="font-size: small;">ID - 7WCTHLPFTP9B</p>
-        </div>
-
-        <div class="col rcorners shadow card">
-            <h5 style="color: #4D869C;">Oracle Certified Associate, Java SE 8 Programmer</h5>
-            <br>
-            <p style="font-size: small;">ID - 273187650OCAJSE8</p>
-            
-        </div>  
+        @for (course of courses; track course) {
+            <div class="col rcorners shadow certification-card">
+                <h5 style="color: #4D869C;">{{course.name}}</h5>
+                <br>
+                <p style="font-size: small;">ID - {{course.id}}</p>
+            </div>
+        }
     </div>
 
 
@@ -81,9 +76,10 @@
 
     <div class="row">
         <div class="col rcorners shadow card">
-            <h4 class="main">System Engineer - Tata Consultancy Services</h4>
-            <p>(Aug 2021 - Present)</p>
-            
+            <h4 class="main">{{post}}</h4>
+            <p style="font-size: smaller;">{{experiencePeriod}}</p>
+            <b>Total Work Experience: <span style="color: #C73659;">{{totalWorkExperienceinYears}} years {{totalMonthsSinceStartDate}} months</span></b>
+            <br><br>
             @for (item of experienceItems; track item) {
                 <li>{{item}}</li>
             }
@@ -125,5 +121,7 @@
 
 
 </div>
+
+<br><br><br>
 
 

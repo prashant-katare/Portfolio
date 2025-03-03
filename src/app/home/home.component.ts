@@ -13,9 +13,31 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const { years, months } = this.getYearsAndMonthsSince(this.startDate);
+    this.totalWorkExperienceinYears = years;
+    this.totalMonthsSinceStartDate = months;
   }
 
-  bio: string = "Backend Developer with 3+ years of experience in building scalable microservices and RESTful APIs using Java and Spring Boot. Passionate about optimizing performance, integrating third-party services, and delivering clean, maintainable code.";
+  totalWorkExperienceinYears: number = 0;
+  totalMonthsSinceStartDate: number = 0;
+
+  startDate: Date = new Date("2021-08-12");
+
+  experiencePeriod: string = "(Aug 2021 - Present)";
+  post: string = "Backend Developer - Tata Consultancy Services";
+
+  courses: {name: string, id: string}[] = [
+    {
+      name: "Introduction to HTML5 (Coursera)",
+      id: "7WCTHLPFTP9B"
+    },
+    {
+      name: "Oracle Certified Associate, Java SE 8 Programmer",
+      id: "273187650OCAJSE8"  
+    }
+  ];
+
+  bio: string = "Experienced Spring Boot Developer with over 3+ years of expertise in developing scalable and high-performance web applications and microservices. Proficient in Java and Spring Boot frameworks, with hands- on experience in RESTful APIs and Microservices architecture. Adept atbuilding secure, database-driven applications and integrating various third- party services. Strong problem-solving skills with a focus on deliveringclean, maintainable, and efficient code.";
 
   skills: string[] =[
     "Java", 
@@ -71,7 +93,7 @@ projects = [
     "buttons" : [
       {
         "name": "Github",
-        "link": "https://github.com/Prash4nt-K/Hotel_Rating_App"
+        "link": "https://github.com/prashant-katare/Hotel-Rating-Microservices"
       }
     ]
   },
@@ -82,7 +104,7 @@ projects = [
     "buttons" : [
       {
         "name": "Github",
-        "link": "https://github.com/Prash4nt-K/Netflix_Clone"
+        "link": "https://github.com/prashant-katare/Netflix-Clone"
       }
     ]
   },
@@ -102,6 +124,25 @@ projects = [
     ]
   }
 ]
+
+getYearsAndMonthsSince(startDate: Date): { years: number; months: number } {
+  let start = new Date(startDate);
+  let now = new Date();
+  
+  let years = now.getFullYear() - start.getFullYear();
+  let months = now.getMonth() - start.getMonth();
+  
+  if (months < 0) {
+      years--;  // Decrease a year if current month is before start month
+      months += 12;
+  }
+
+  console.log(years, months);
+  
+  return { years, months };
+}
+
+
 
 
 }

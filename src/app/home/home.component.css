@@ -27,6 +27,7 @@
   font-weight: normal;
   line-height: 48px;
   margin: 0;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card {
@@ -37,12 +38,39 @@
   display: inline-block;
 }
 
+.certification-card {
+  word-wrap: break-word;
+  margin: 10px;
+  padding: 55px;
+  width: max-content;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #EAEDED;
+}
+
 .skill-card {
   word-wrap: break-word;
   margin: 10px;
   padding: 25px;
   width: max-content;
   display: inline-block;
+  transition: all 0.3s ease;
+  background-color: #C73659; 
+  color: antiquewhite;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #FAA0A0;
+  color: #c73659;
+  cursor: pointer;
 }
 
 .linksBlue {
@@ -55,6 +83,12 @@
   color: white;
   min-width: 150px;
   width: fit-content;
+}
+
+.linksBlue:hover {
+  background-color: #3a6476;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .linksRed {
@@ -84,10 +118,18 @@
   padding: 2rem 0;
 }
 
-.profile-image img {
-  width: 175px;
-  height: 175px;
+.profile-image img{
+  width: 250px;
+  height: 250px;
   border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile-image img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .intro-content {
@@ -97,18 +139,21 @@
 .greeting {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .name {
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .tagline {
   font-size: 2.5rem;
   font-weight: bold;
   margin-top: 0.5rem;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 @media (max-width: 768px) {
