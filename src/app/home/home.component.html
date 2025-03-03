@@ -103,15 +103,22 @@
         <div class="col rcorners shadow card">
 
             @for (project of projects; track project) { 
-                <h4>{{project.title}}</h4>
+                <h4><span class="project-title">{{project.title}}</span></h4>
                 <div class="row">
                     <p class="col-12">{{project.description}}</p>
+                    <div>
+                        <b class="tech-stack-label">Tech Stack :</b>
+                        @for (technology of project.technologies; track technology) {
+                            <span class="tech-badge">{{technology}}</span>
+                        }
+                        <br><br>
+                    </div>
                     @for (button of project.buttons; track button) {
                         <a class="linksBlue" href="{{button.link}}">{{button.name}}</a>
                     }   
                 </div>
 
-                <br>
+                <br><br>
             }
   
         </div>

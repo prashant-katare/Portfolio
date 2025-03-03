@@ -73,8 +73,8 @@ experienceItems:string[] = [
 projects = [
   {
     "title": "Book Recommendation Site",
-    "description": "Developed a full-stack e-commerce website using Angular and Spring Boot, with features such as book management, shopping cart, and payment processing.",
-    "technologies": ["Angular", "Spring Boot", "MySQL", "Bootstrap", "HTML5", "CSS"],
+    "description": "Developed a full-stack book recommendation platform using Spring Boot, Java, Angular, and MySQL. Implemented Spring Security for authentication and role-based authorization. Built a dynamic frontend with login/signup, cart, wishlist, payments, profile management, order tracking, and an admin dashboard. Developed RESTful APIs, optimized database performance, and ensured scalability, security, and a seamless user experience.",
+    "technologies": ["Spring Boot", "Spring MVC", "spring data jpa", "Spring Security", "spring web", "Core Java", "Angular", "TypeScript", "HTML5", "Cascading Style Sheets (CSS)", "MySQL"],
     "buttons" : [
       {
         "name": "Github-Frontend",
@@ -88,8 +88,8 @@ projects = [
   },
   {
     "title": "Hotel-Rating Microservice Application",
-    "description": "A microservice application created using all essential microservices aspects like Service Discovery, microservice communication using Feign Client, API Gateway, external configuration using Config Server, circuit breaker using resilience4j.",
-    "technologies": ["Java", "Spring Boot", "MySQL", "Eureka", "Feign Client", "API Gateway", "Config Server", "Resilience4j"],
+    "description": "Developed a scalable Hotel Rating Microservice architecture using Spring Boot. Implemented Eureka for service discovery, API Gateway for centralized routing, and Config Server for dynamic configuration. Enabled inter-service communication via RESTful APIs and ensured fault tolerance with the Circuit Breaker pattern. Optimized security, scalability, and performance for seamless hotel rating and user management.",
+    "technologies": ["Spring Boot", "Spring MVC", "spring web", "Spring Cloud", "Fault Tolerance", "Java Microservices", "API Gateways", "spring data jpa", "MySQL"],
     "buttons" : [
       {
         "name": "Github",
@@ -100,7 +100,7 @@ projects = [
   { 
     "title": "Netflix-Clone",
     "description": "An atempt to make a netflix-clone app using Angular. The backend api used to fetch data is TMDb API (Only accessable using VPN inside India).",
-    "technologies": ["Angular", "Spring Boot", "MySQL", "Bootstrap", "HTML5", "CSS"],
+    "technologies": ["Angular", "HTML5", "CSS", "TypeScript"],
     "buttons" : [
       {
         "name": "Github",
@@ -110,8 +110,8 @@ projects = [
   },
   {
     "title": "Blog Site",
-    "description": "A personal blogging platform for my personal blogs. The web app is hosted on AWS EC2 instance using nGinx. The backend Java Jar file is also hosted on the same server as a linux service.",
-    "technologies": ["Angular", "Spring Boot", "MySQL", "Bootstrap", "HTML5", "CSS"],
+    "description": "Developed as a learning project, this blog site uses Angular for the frontend and Spring Boot for the backend, implementing basic CRUD operations. It showcases foundational knowledge of RESTful APIs, frontend-backend integration, and database management.",
+    "technologies": ["Angular", "HTML5", "CSS", "TypeScript"],
     "buttons" : [
       {
         "name": "Github-Frontend",
