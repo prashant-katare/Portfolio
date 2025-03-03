@@ -1,0 +1,129 @@
+<br><br><br>
+
+<div class="container">
+
+    <div class="hide">
+        <img src="/assets/img.jpg" width="175px" height="175px">
+    </div>
+
+    <section id="about" class="intro-section">
+        <div class="profile-image">
+            <img src="../../assets/images/img.jpg" alt="Prashant Katare">
+        </div>
+        
+        <div class="intro-content">
+            <p class="greeting">Hi, my name is</p>
+            <h1 class="name">Prashant Katare.</h1>
+            <h2 class="tagline">I build things for the web.</h2>
+        </div>
+    </section>
+
+    <!-- ................................................................................... -->
+
+
+    <br><br><br>
+
+    <div class="rcorners shadow" style="word-wrap: break-word; padding: 40px;">
+        {{bio}}
+    </div>
+
+    
+
+    <!-- ................................................................................... -->
+
+
+    <br><br><br>
+
+    <div class="row heading">Skills</div>
+
+    <br>
+
+    @for (skill of skills; track skill) {
+        <div class="rcorners shadow skill-card" style="background-color: #C73659; color: antiquewhite;">
+            {{skill}}
+        </div>
+    }
+
+
+    <br><br><br>
+
+    <!-- ................................................................................... -->
+
+
+    <div class="row heading">Certifications</div>
+
+    <br>
+
+    <div class="row">
+        <div class="col rcorners shadow card">
+            <h5 style="color: #4D869C;">Introduction to HTML5 (Coursera)</h5>
+            <br>
+            <p style="font-size: small;">ID - 7WCTHLPFTP9B</p>
+        </div>
+
+        <div class="col rcorners shadow card">
+            <h5 style="color: #4D869C;">Oracle Certified Associate, Java SE 8 Programmer</h5>
+            <br>
+            <p style="font-size: small;">ID - 273187650OCAJSE8</p>
+            
+        </div>  
+    </div>
+
+
+    <br><br><br>
+
+    <!-- ................................................................................... -->
+
+
+    <div class="row heading" id="experience">Experience</div>
+
+    <br>
+
+    <div class="row">
+        <div class="col rcorners shadow card">
+            <h4 class="main">System Engineer - Tata Consultancy Services</h4>
+            <p>(Aug 2021 - Present)</p>
+            
+            @for (item of experienceItems; track item) {
+                <li>{{item}}</li>
+            }
+        </div>
+    </div>
+
+
+    <!-- ................................................................................... -->
+
+
+    <br><br><br>
+
+
+    <div class="row heading" id="work">
+        Work
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col rcorners shadow card">
+
+            @for (project of projects; track project) { 
+                <h4>{{project.title}}</h4>
+                <div class="row">
+                    <p class="col-12">{{project.description}}</p>
+                    @for (button of project.buttons; track button) {
+                        <a class="linksBlue" href="{{button.link}}">{{button.name}}</a>
+                    }   
+                </div>
+
+                <br>
+            }
+  
+        </div>
+    </div>
+
+    <!-- ................................................................................... -->
+
+
+</div>
+
+

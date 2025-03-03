@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+img {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body {
+    font-size: medium;
+}
